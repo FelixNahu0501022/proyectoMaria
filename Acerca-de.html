@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Filósofos</title>
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="filosofos.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Filósofos">
+  <meta property="og:type" content="website">
+  <style>
+    .filosofo-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      height: 100%;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .filosofo-card:hover {
+      transform: scale(1.05);
+    }
+
+    .filosofo-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      aspect-ratio: 1 / 1;
+    }
+
+    .filosofo-card h3 {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 991px) {
+      .u-sheet-1 {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .u-sheet-1 {
+        grid-template-columns: repeat(1, 1fr) !important;
+      }
+    }
+  </style>
+</head>
+
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="es">
+  <header class="u-clearfix u-header u-header" id="header">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1">
+        <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" role="navigation" aria-label="Menu navigation">
+        <div class="menu-collapse">
+          <a class="u-button-style u-nav-link" href="#" aria-label="Open menu">
+            <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect></g></svg>
+          </a>
+        </div>
+        <div class="u-nav-container">
+          <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item"><a class="u-nav-link" href="index.html">Inicio</a></li>
+            <li class="u-nav-item"><a class="u-nav-link" href="Acerca-de.html">Filósofos</a></li>
+            <li class="u-nav-item"><a class="u-nav-link" href="Biografias.html">Biografias</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="u-clearfix u-section-1" id="filosofos-grid">
+    <div class="u-clearfix u-sheet u-sheet-1" style="
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 40px 0;
+    ">
+
+      <!-- FILÓSOFOS -->
+      <a href="Filosofos/friedrich-nietzsche.html" class="filosofo-card">
+        <img src="Filosofos/Imagenes/friedrich-nietzsche.jpg" alt="Friedrich Nietzsche">
+        <h3>Friedrich Nietzsche</h3>
+      </a>
+
+      <a href="Filosofos/zaratustra-nietzsche.html" class="filosofo-card">
+        <img src="Filosofos/Imagenes/Portada.jpg" alt="Así habló Zaratustra">
+        <h3>Así habló Zaratustra</h3>
+      </a>
+
+      <a href="Filosofos/foucault.html" class="filosofo-card">
+        <img src="Filosofos/Imagenes/foucault.jpeg" alt="Michel Foucault">
+        <h3>Michel Foucault</h3>
+      </a>
+
+      <a href="Filosofos/pensamiento-critico.html" class="filosofo-card">
+        <img src="Filosofos/Imagenes/4.jpg" alt="Paul & Elder">
+        <h3>Paul & Elder</h3>
+      </a>
+
+      <a href="Filosofos/5.html" class="filosofo-card"><img src="Filosofos/Imagenes/5.jpg" alt="Simone de Beauvoir"><h3>Introducción a la filosofía contemporánea</h3></a>
+      <a href="Filosofos/6.html" class="filosofo-card"><img src="Filosofos/Imagenes/6.png" alt="Ludwig Wittgenstein"><h3>Simone de Beauvoir
+</h3></a>
+      <a href="Filosofos/7.html" class="filosofo-card"><img src="Filosofos/Imagenes/7.jpeg" alt="Jürgen Habermas"><h3>Ludwig Wittgenstein</h3></a>
+      <a href="Filosofos/8.html" class="filosofo-card"><img src="Filosofos/Imagenes/8.jpeg" alt="Hannah Arendt"><h3>Jürgen Habermas</h3></a>
+      <a href="Filosofos/9.html" class="filosofo-card"><img src="Filosofos/Imagenes/9.jpeg" alt="Slavoj Žižek"><h3>Hannah Arendt</h3></a>
+      <a href="Filosofos/10.html" class="filosofo-card"><img src="Filosofos/Imagenes/10.jpg" alt="Herbert Marcuse"><h3>Slavoj Zizek</h3></a>
+      <a href="Filosofos/11.html" class="filosofo-card"><img src="Filosofos/Imagenes/11.jpeg" alt="Theodor Adorno"><h3>Herbert Marcuse</h3></a>
+      <a href="Filosofos/12.html" class="filosofo-card"><img src="Filosofos/Imagenes/12.jpeg" alt="Byung-Chul Han"><h3>Theodor Adorno</h3></a>
+      <a href="Filosofos/13.html" class="filosofo-card"><img src="Filosofos/Imagenes/13.jpeg" alt="Antonio Gramsci"><h3>Byung-Chul Han</h3></a>
+
+      <a href="Filosofos/14.html" class="filosofo-card"><img src="Filosofos/Imagenes/14.jpeg" alt="Antonio Gramsci"><h3>Albert Camus</h3></a>
+    </div>
+  </section>
+
+  <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="footer">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">Proyecto educativo - Filosofía Contemporánea</p>
+    </div>
+  </footer>
+
+  <section class="u-backlink u-clearfix u-grey-80"></section>
+</body>
+</html>

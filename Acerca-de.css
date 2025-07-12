@@ -1,0 +1,7 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 400px;
+}
+.filosofo-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

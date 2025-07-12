@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 16px;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>George Edward Moore</title>
+  <link rel="stylesheet" href="../../nicepage.css" media="screen">
+  <link rel="stylesheet" href="../../filosofos.css" media="screen">
+  <script class="u-script" type="text/javascript" src="../../jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="../../nicepage.js" defer=""></script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="George Edward Moore">
+  <meta property="og:type" content="website">
+  <style>
+    .contenido {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+    }
+    .contenido h2 {
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1rem;
+    }
+    .contenido img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="u-body u-xl-mode" data-lang="es">
+
+  <header class="u-clearfix u-header u-header" id="header">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1">
+        <img src="../../images/default-logo.png" class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1" role="navigation" aria-label="Menu navigation">
+        <div class="menu-collapse">
+          <a class="u-button-style u-nav-link" href="#" aria-label="Open menu">
+            <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect></g></svg>
+          </a>
+        </div>
+        <div class="u-nav-container">
+          <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item"><a class="u-nav-link" href="../../index.html">Inicio</a></li>
+            <li class="u-nav-item"><a class="u-nav-link" href="../Biografias.html">Biografias</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenido">
+    <h2>George Edward Moore (1873–1958)</h2>
+    <img src="Images/4.jpeg" alt="George Edward Moore">
+
+    <p><strong>George Edward Moore</strong> fue un filósofo británico y uno de los fundadores de la filosofía analítica. Junto con Bertrand Russell, revolucionó la filosofía del siglo XX al defender la claridad conceptual y el análisis lingüístico como métodos filosóficos fundamentales.</p>
+
+    <p>Moore es especialmente conocido por su obra <em>Principia Ethica</em> (1903), en la que critica el naturalismo ético y defiende la idea de que el bien es una propiedad simple e indefinible. Su "falacia naturalista" se convirtió en una noción central en la ética contemporánea.</p>
+
+    <p>También es célebre por su argumento de sentido común en contra del escepticismo, como en su famoso ejemplo: “Aquí hay una mano”. Moore defendía que algunas proposiciones son más ciertas que cualquier argumento filosófico que las cuestione.</p>
+
+    <p>Su influencia fue notable en el Círculo de Cambridge y en filósofos posteriores como Wittgenstein y los positivistas lógicos.</p>
+  </main>
+<hr style="margin-top: 3rem;">
+<section id="foro-comentarios" class="contenido">
+  <h3>💬 Foro de discusión</h3>
+  <form id="comentarioForm" style="margin-bottom: 2rem;">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" required style="width: 100%; margin-bottom: 1rem;"><br>
+
+    <label for="comentario">Comentario:</label><br>
+    <textarea id="comentario" rows="4" required style="width: 100%; margin-bottom: 1rem;"></textarea><br>
+
+    <label for="archivo">Archivo complementario (opcional):</label><br>
+    <input type="file" id="archivo" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" style="margin-bottom: 1rem;"><br>
+
+    <button type="submit" style="padding: 8px 16px; background-color: #478ac9; color: white; border: none; border-radius: 5px;">Publicar</button>
+  </form>
+
+  <div id="comentariosList">
+    <h4>🗂 Comentarios recientes</h4>
+    <!-- Comentarios se insertarán aquí -->
+  </div>
+</section>
+
+  <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">George E. Moore - Ética y sentido común en la filosofía</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+<script>
+  const pageKey = window.location.pathname;
+  const form = document.getElementById('comentarioForm');
+  const comentariosList = document.getElementById('comentariosList');
+
+  function mostrarComentarios() {
+    const datos = JSON.parse(localStorage.getItem(pageKey)) || [];
+    comentariosList.innerHTML = '<h4>🗂 Comentarios recientes</h4>';
+    datos.forEach((item) => {
+      const div = document.createElement('div');
+      div.style.marginBottom = '1.5rem';
+      div.innerHTML = `
+        <strong>${item.nombre}</strong><br>
+        <p>${item.comentario}</p>
+        ${item.archivo ? `
+          <a href="${item.archivo}" download="archivo_complementario" target="_blank" style="color: #478ac9;">
+            📎 Descargar archivo adjunto
+          </a><br>` : ''}
+        <hr>
+      `;
+      comentariosList.appendChild(div);
+    });
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const comentario = document.getElementById('comentario').value;
+    const archivoInput = document.getElementById('archivo');
+    const archivo = archivoInput.files[0];
+
+    if (!nombre || !comentario) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const datos = JSON.parse(localStorage.getItem(pageKey)) || [];
+      datos.push({
+        nombre,
+        comentario,
+        archivo: archivo ? e.target.result : null
+      });
+      localStorage.setItem(pageKey, JSON.stringify(datos));
+      form.reset();
+      mostrarComentarios();
+    };
+
+    if (archivo) {
+      reader.readAsDataURL(archivo);
+    } else {
+      const datos = JSON.parse(localStorage.getItem(pageKey)) || [];
+      datos.push({ nombre, comentario, archivo: null });
+      localStorage.setItem(pageKey, JSON.stringify(datos));
+      form.reset();
+      mostrarComentarios();
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', mostrarComentarios);
+</script>
